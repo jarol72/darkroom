@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Dark Room</title>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="darkness"></div>
+        <div class="wire"></div>
+        <!-- <div class="header__fondo" id="fondo">
+          <h1 class="header__name" id="artistName">Jaime Rodríguez Lopera</h1>
+        </div> -->
+        <div class="light">
+          <div class="bulb">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h1 class="header__name" id="artistName">Jaime Rodríguez Lopera</h1>
+        <div class="floatingText">Click</div>
+        <div class="switch">
+          <span class="switch__text">OFF</span>
+          <span class="switch__text">ON</span>
+          <div class="btn"></div>
+        </div>
+      </div>
+    </div>
+    <audio id="audio" src="sound/click.mp3" autostart="false"></audio>
+    <script>
+      let d = document,
+          btn = d.querySelector('.btn'),
+          body = d.querySelector('body'),
+          audio = d.querySelector('#audio'),
+          darknes = d.querySelector('.darkness');
+
+      btn.onclick = function() {
+        body.classList.toggle('on');
+        audio.play();
+      }
+
+    </script>
+  </body>
+</html>

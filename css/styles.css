@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Serif:ital,wght@0,400;0,700;1,700&family=Open+Sans:wght@400;700&family=Text+Me+One&display=swap');
+
+:root {
+    --primary: #04152e;
+    --form-background: #f1f1e6;
+    --font-cursive: 'Great Vibes', cursive;
+    --font-menu: 'Text Me One', sans-serif;
+
+    --body-background: #f7f9f7;
+    --blue: #2b7095; /* #49708A; */
+    --medium-blue: #88ABC2;
+    --light-blue: #D0E0EB;
+    --medium-gray: #ccc;
+
+    /* Blue jay feather */
+    --three-color-black: #1F1F20;
+    --blue-jay-blue: #2b4c7e;
+    --blue-jay-accent: #567EBB;
+    --blue-jay-gray: #606D80;
+    --blue-jay-white: #E6EAF0 /*#DCE0E6*/;
+
+    /* Devastating loss */
+    --devastating-loss: #B8D0DE;
+    --heartbroken: #9FC2D6;
+    --bereft: #86B4CF;
+    --forlom: #73A2BD;
+    --sympathy: #6792AB;
+
+    /* Devastating loss */
+    --rachel: #8E9E82;
+    --dove: #CACCB6;
+    --creme-de-la-creme: #F2F0DF;
+    --blue-monday: #A9C1D9;
+    --electrik-escape: #607890;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+body {
+    background-color: var(--body-background);
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    overflow-x: hidden
+}
+
+p {
+    font-size: 22px;
+}
+
+/* main {
+    background: #222;
+} */
+/* ++++++++++ HEADER +++++++++++++++ */
+.header {
+    background-image: url('../img/silueta_blanca_costado.webp');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.header__name {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100vw;
+    padding: 5px    ;
+    color: #fff7; 
+    font-family: var(--font-cursive);
+    font-size: 2em;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 1vw;
+    text-shadow: 1px 1px 7px black;
+    line-height: 3em;
+    text-align: center;
+    mix-blend-mode: hard-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.on .header__name {
+    opacity: 1;
+}
+
+.darkness {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    /* opacity: 0; */
+}
+
+.on .darkness {
+    background: radial-gradient(#5550, #2220);
+}
+
+.bulb {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background: #444;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+body.on .bulb {
+    background: #fff;
+    box-shadow: 
+        0 0 50px #fff,
+        0 0 100px #fff,
+        0 0 150px #fff,
+        0 0 2000px #fff,
+        0 0 250px #fff,
+        0 0 300px #fff,
+        0 0 350px #fff;
+}
+
+.bulb::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 22.5px;
+    width: 35px;
+    height: 80px;
+    background: #444;
+    border-top: 30px solid #000;
+    border-radius: 10px;
+}
+
+body.on .bulb::before {
+    background: #fff;
+}
+
+body.on .bulb::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.bulb span:nth-child(1) {
+    position: absolute;
+    top: -16px;
+    left: -3px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(345deg);
+    border-bottom-right-radius: 40px;
+    box-shadow: 20px 20px 0 10px #444;
+}
+
+body.on .bulb span:nth-child(1) {
+    box-shadow: 20px 20px 0 10px #fff;
+}
+
+.bulb span:nth-child(2) {
+    position: absolute;
+    top: -16px;
+    right: -3px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(15deg);
+    border-bottom-left-radius: 40px;
+    box-shadow: -20px 20px 0 10px #444;
+}
+
+body.on .bulb span:nth-child(2) {
+    box-shadow: -20px 20px 0 10px #fff;
+}
+
+.wire {
+    position: absolute;
+    left: calc(50% - 2px);
+    bottom: 80%;
+    width: 4px;
+    height: 60vh;
+    background: #000;
+    z-index: 1;
+}
+
+.floatingText {
+    position: absolute;
+    bottom: 150px;
+    right: 50px;
+    color: var(--blue-jay-white);
+    transform: rotate(-15deg);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: .7em;
+    animation: rotateText 1.5s linear infinite;
+}
+
+/* @keyframes rotateText {
+    0%{transform: rotate(-15deg)}
+    50%{transform: rotate(15deg)}
+    100%{transform: rotate(-15deg)}
+} */
+
+@keyframes rotateText {
+    0%{transform: scale(1)}
+    50%{transform: scale(1.2)}
+    100%{transform: scale(1)}
+}
+
+.switch {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 60px;
+    height: 100px;
+    background: linear-gradient(#fff,#eee,#fff);
+    border: 3px solid #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch__text:nth-child(1) {
+    position: absolute;
+    display: block;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .3em;
+    font-weight: bolder;
+    color: #f00;
+}
+
+.on .switch__text:nth-child(1) {
+    color: #555;
+}
+
+.switch__text:nth-child(2) {
+    position: absolute;
+    display: block;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .3em;
+    font-weight: bolder;
+}
+
+.on .switch__text:nth-child(2) {
+    color: #1eb432;
+    text-shadow: 0px 0px 2px #0f0;
+}
+
+.switch .btn {
+    position: relative;
+    width: 25px;
+    height: 50px;
+    background: linear-gradient(#777, #fff, #777);
+    border-radius: 6px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.switch .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background: linear-gradient(#fff, #fff);
+    border-radius: 4px;
+}
+
+.on .switch .btn::before {
+    top: 15%;
+}
+
+#audio {
+    display: none;
+}
+/* 
+.header__fondo {
+    background-image: url('../img/cuadros/silueta_blanca_costado.webp');
+    width: 0%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
