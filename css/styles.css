@@ -211,7 +211,7 @@ body.on .bulb span:nth-child(2) {
 .floatingText {
     position: absolute;
     bottom: 150px;
-    right: 50px;
+    right: 54px;
     color: var(--blue-jay-white);
     transform: rotate(-15deg);
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
